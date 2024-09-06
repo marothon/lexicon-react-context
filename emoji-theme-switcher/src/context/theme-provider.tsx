@@ -7,7 +7,7 @@ interface IThemeContextValue {
   updateTheme: Function
 }
 
-export const ThemeContext = createContext<IThemeContextValue|null>(null);
+export const ThemeContext = createContext<IThemeContextValue>({} as IThemeContextValue);
 
 export default function ThemeProvider({children}: {children: ReactNode}){
   const [theme, setTheme] = useState<Theme>('😎');
